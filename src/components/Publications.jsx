@@ -3,30 +3,21 @@ import { motion } from 'framer-motion';
 
 const publications = [
   {
-    title: "Protein-Protein Interaction Network Analysis of Mucormycosis Species",
+    title: "Machine Learning-Based Approaches for Vaccine Target Identification: Implementation and Insights",
     authors: "Gupta, K., et al.",
-    journal: "Journal of Bioinformatics and Computational Biology",
+    journal: "OSF Preprints",
     year: "2024",
-    status: "In Review",
-    abstract: "A comprehensive analysis of protein-protein interactions in mucormycosis species, revealing key pathogenic mechanisms and potential therapeutic targets.",
-    link: "#"
-  },
-  {
-    title: "Machine Learning Applications in Fungal Genomics",
-    authors: "Gupta, K., et al.",
-    journal: "Bioinformatics Research and Applications",
-    year: "2023",
     status: "Published",
-    abstract: "Review of machine learning techniques applied to fungal genomics, highlighting novel approaches for understanding pathogenicity and drug resistance.",
-    link: "#"
+    abstract: "This study involved extensive data analysis on large-scale datasets, employing multiple machine learning algorithms, including PyTorch, TensorFlow, and Scikit-Learn, to develop a predictive model.",
+    link: "https://osf.io/preprints/osf/p4ayq"
   },
   {
-    title: "Antifungal Drug Resistance: A Systems Biology Approach",
+    title: "Exploring Metabolic Pathways Implicated in Antifungal Drug Resistance",
     authors: "Gupta, K., et al.",
     journal: "Computational Biology and Bioinformatics",
     year: "2023",
     status: "Published",
-    abstract: "Systems biology analysis of antifungal drug resistance mechanisms using integrated genomic and pathway analysis approaches.",
+    abstract: "Utilized genomic and transcriptomic data to perform pathway enrichment analysis, employing tools such as KEGG and Reactome. Implemented differential gene expression analysis and metabolic network modeling to identify key enzymes and metabolites implicated in resistance mechanisms.",
     link: "#"
   }
 ];
@@ -45,12 +36,15 @@ const Publications = () => {
           
           <div className="space-y-6">
             {publications.map((pub, index) => (
-              <motion.div
+              <motion.a
                 key={index}
+                href={pub.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
+                className="block group"
               >
                 <div className="bg-white/5 backdrop-blur-xl p-8 border-l-4 border-l-white/20 border-y border-r border-white/10 hover:bg-white/10 transition-all duration-300">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
@@ -72,7 +66,7 @@ const Publications = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </motion.div>

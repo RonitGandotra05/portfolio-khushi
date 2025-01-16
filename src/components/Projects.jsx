@@ -4,21 +4,21 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     title: "Multi-Armed Bandit Recommendation System",
-    description: "Developed a recommendation system using the Multi-Armed Bandit algorithm to optimize video recommendations based on user interactions. The system dynamically learns and adapts to user preferences, enhancing content recommendations for improved user satisfaction.",
+    description: "Developed a recommendation system using the Multi-Armed Bandit algorithm to optimize video recommendations based on user interactions. Developed in Python, the system dynamically learns and adapts to user preferences, enhancing content recommendations for improved user satisfaction.",
     tech: ["Python", "Machine Learning", "Recommendation Systems", "Data Analysis"],
-    link: "https://github.com/khushii1412"
+    link: "https://github.com/RonitGandotra05/Epsilon-Greedy-Multi-Armed-Bandit-Recommendation-System"
   },
   {
     title: "NLP-based Sentiment Analysis",
-    description: "Developed an NLP-based sentiment analysis pipeline to analyze customer chat data. The project involves preprocessing text data, performing sentiment analysis, and visualizing results using Python, Pandas, NLTK, and TextBlob.",
-    tech: ["Python", "NLTK", "TextBlob", "Pandas", "Data Visualization"],
-    link: "https://github.com/khushii1412"
+    description: "Developed an NLP-based sentiment analysis pipeline to analyze customer chat data. The project involves preprocessing text data, performing sentiment analysis, and visualizing results using Python, Pandas, NLTK, TextBlob, Matplotlib, Seaborn. This project is directly relevant to e-commerce as it can be used to improve customer satisfaction.",
+    tech: ["Python", "NLTK", "TextBlob", "Pandas", "Matplotlib", "Seaborn"],
+    link: "https://github.com/RonitGandotra05/NLP-based-Sentiment-Analysis"
   },
   {
     title: "Metabolic Pathways Analysis",
-    description: "Analysis of metabolic pathways implicated in antifungal drug resistance using genomic and transcriptomic data. Utilized KEGG and Reactome for pathway analysis, identifying key resistance mechanisms.",
+    description: "Analysis of metabolic pathways implicated in antifungal drug resistance using genomic and transcriptomic data. Utilized KEGG and Reactome for pathway analysis, identifying key resistance mechanisms and potential therapeutic targets.",
     tech: ["KEGG", "Reactome", "Bioinformatics", "Pathway Analysis", "R"],
-    link: "https://github.com/khushii1412"
+    link: "#"
   }
 ];
 
