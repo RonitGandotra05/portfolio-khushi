@@ -5,7 +5,7 @@ const publications = [
   {
     title: "Machine Learning-Based Approaches for Vaccine Target Identification: Implementation and Insights",
     authors: "Gupta, K., et al.",
-    journal: "OSF Preprints",
+    journal: "OSF",
     year: "2024",
     status: "Published",
     abstract: "This study involved extensive data analysis on large-scale datasets, employing multiple machine learning algorithms, including PyTorch, TensorFlow, and Scikit-Learn, to develop a predictive model.",

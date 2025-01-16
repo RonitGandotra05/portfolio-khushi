@@ -38,7 +38,7 @@ const Hero = () => {
               sequence={[
                 'Data Scientist',
                 2000,
-                'Bioinformatics Student',
+                'Bioinformatician',
                 2000,
                 'Machine Learning Developer',
                 2000,
