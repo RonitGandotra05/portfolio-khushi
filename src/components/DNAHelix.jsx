@@ -8,7 +8,6 @@ export function DNAHelix(props) {
   useFrame((state) => {
     if (group.current) {
       group.current.rotation.y += 0.005;
-      group.current.rotation.z = Math.sin(state.clock.elapsedTime) * 0.1;
     }
   });
 
@@ -26,7 +25,7 @@ export function DNAHelix(props) {
             position={[0.5, 0, 0]}
           >
             <MeshDistortMaterial
-              color="#c4b5fd"
+              color="#E5E7EB"
               envMapIntensity={3}
               clearcoat={1}
               clearcoatRoughness={0.1}
@@ -46,7 +45,7 @@ export function DNAHelix(props) {
             position={[-0.5, 0, 0]}
           >
             <MeshDistortMaterial
-              color="#8b5cf6"
+              color="#9CA3AF"
               envMapIntensity={3}
               clearcoat={1}
               clearcoatRoughness={0.1}
@@ -66,8 +65,8 @@ export function DNAHelix(props) {
             position={[0, 0, 0]}
           >
             <meshPhysicalMaterial
-              color="#a78bfa"
-              emissive="#c4b5fd"
+              color="#D1D5DB"
+              emissive="#F3F4F6"
               emissiveIntensity={0.8}
               metalness={1}
               roughness={0.1}
@@ -81,4 +80,6 @@ export function DNAHelix(props) {
       ))}
     </group>
   );
-} 
+}
+
+export default DNAHelix; 

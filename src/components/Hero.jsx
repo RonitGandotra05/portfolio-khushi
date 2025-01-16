@@ -7,8 +7,8 @@ const Hero = () => {
     <section className="relative h-screen flex items-center justify-start overflow-hidden px-4 sm:px-6 lg:px-8">
       {/* Background Gradients */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-radial from-purple-900/20 via-purple-800/10 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-transparent to-purple-800/10" />
+        <div className="absolute inset-0 bg-gradient-radial from-gray-900/20 via-gray-800/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/10 via-transparent to-gray-800/10" />
       </div>
 
       {/* Text Content */}
@@ -24,7 +24,7 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <span className="bg-gradient-to-r from-purple-300 via-purple-400 to-purple-500 text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-white via-gray-100 to-gray-200 text-transparent bg-clip-text drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
               Hi, I'm Khushi Gupta
             </span>
           </motion.h1>
@@ -44,14 +44,14 @@ const Hero = () => {
                 2000,
               ]}
               wrapper="h2"
-              className="text-3xl md:text-4xl text-purple-300 font-semibold"
+              className="text-3xl md:text-4xl text-white font-semibold"
               repeat={Infinity}
               cursor={true}
             />
           </motion.div>
 
           <motion.p 
-            className="mt-8 text-xl text-gray-300 max-w-2xl"
+            className="mt-8 text-xl text-white max-w-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
@@ -71,7 +71,7 @@ const Hero = () => {
               href="https://drive.google.com/file/d/1xWQpCJy9YjM9_NyN_TEuxqYIYu6vY6gy/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg text-white bg-purple-700 hover:bg-purple-600 transition-all transform hover:scale-105 hover:shadow-lg group"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg text-white bg-gray-800/80 hover:bg-gray-700/80 transition-all transform hover:scale-105 hover:shadow-lg group backdrop-blur-sm"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -88,7 +88,7 @@ const Hero = () => {
 
             <motion.a
               href="#contact"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg text-purple-300 border-2 border-purple-700 hover:bg-purple-700/20 transition-all transform hover:scale-105 hover:shadow-lg group"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg text-white border-2 border-white/30 hover:bg-white/10 transition-all transform hover:scale-105 hover:shadow-lg group backdrop-blur-sm"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -117,9 +117,9 @@ const Hero = () => {
         }}
         className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-30"
       >
-        <div className="w-8 h-12 border-2 border-purple-400 rounded-full flex justify-center">
+        <div className="w-8 h-12 border-2 border-white rounded-full flex justify-center">
           <motion.div 
-            className="w-2 h-3 bg-purple-400 rounded-full mt-2"
+            className="w-2 h-3 bg-white rounded-full mt-2"
             animate={{ 
               y: [0, 12, 0],
             }}

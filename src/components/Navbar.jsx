@@ -20,20 +20,11 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-purple-950/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-gray-900/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link to="/" className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 text-transparent bg-clip-text">
-              KG
-            </Link>
-          </motion.div>
-
+        <div className="flex items-center justify-end h-20">
           <div className="hidden md:flex items-center space-x-8">
             {['About', 'Experience', 'Projects', 'Skills', 'Publications', 'Contact'].map((item) => (
               <motion.div
@@ -47,7 +38,7 @@ const Navbar = () => {
           </div>
 
           <motion.button
-            className="md:hidden text-purple-300 hover:text-purple-200"
+            className="md:hidden text-white hover:text-gray-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
@@ -76,7 +67,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-purple-950/90 backdrop-blur-md"
+            className="md:hidden bg-gray-900/90 backdrop-blur-md"
           >
             <div className="container mx-auto px-4 py-4">
               {['About', 'Experience', 'Projects', 'Skills', 'Publications', 'Contact'].map((item) => (
@@ -107,10 +98,10 @@ const NavLink = ({ href, children, onClick }) => (
   <a
     href={href}
     onClick={onClick}
-    className="text-purple-300 hover:text-purple-100 transition-colors duration-300 text-lg font-medium relative group"
+    className="text-white hover:text-gray-200 transition-colors duration-300 text-lg font-medium relative group"
   >
     {children}
-    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full" />
+    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
   </a>
 );
 

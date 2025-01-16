@@ -41,20 +41,18 @@ const ScrollingDNA = () => {
           }}
         >
           <ambientLight intensity={0.4} />
-          <pointLight position={[10, 10, 10]} intensity={1.2} color="#8b5cf6" />
-          <pointLight position={[-10, -10, -10]} intensity={0.8} color="#4c1d95" />
+          <pointLight position={[10, 10, 10]} intensity={1.2} color="#FFFFFF" />
+          <pointLight position={[-10, -10, -10]} intensity={0.8} color="#E5E7EB" />
           <DNAHelix position={[0, 0, 0]} scale={1.5} />
           <Environment preset="night" />
           <OrbitControls
             enableZoom={false}
             enablePan={false}
-            minPolarAngle={Math.PI / 2.5}
-            maxPolarAngle={Math.PI / 1.5}
+            enableRotate={false}
             autoRotate
-            autoRotateSpeed={0.2}
-            enableDamping={true}
-            dampingFactor={0.05}
-            rotateSpeed={0.2}
+            autoRotateSpeed={2}
+            minPolarAngle={Math.PI / 2}
+            maxPolarAngle={Math.PI / 2}
           />
         </Canvas>
       </motion.div>
