@@ -5,19 +5,20 @@ const projects = [
   {
     title: "Multi-Armed Bandit Recommendation System",
     description: "Developed a recommendation system using the Multi-Armed Bandit algorithm to optimize video recommendations based on user interactions. The system dynamically learns and adapts to user preferences, enhancing content recommendations for improved user satisfaction.",
-    tech: ["Python", "Machine Learning", "Recommendation Systems"],
-    github: "https://github.com/RonitGandotra05/Multi-Armed-Bandit-Recommendation-System"
+    tech: ["Python", "Machine Learning", "Recommendation Systems", "Data Analysis"],
+    link: "https://github.com/khushii1412"
   },
   {
-    title: "NLP based Sentiment Analysis",
-    description: "Developed an NLP-based sentiment analysis pipeline to analyze customer chat data. The project involves preprocessing text data, performing sentiment analysis, and visualizing results using Python, Pandas, NLTK, TextBlob.",
-    tech: ["Python", "NLTK", "TextBlob", "Pandas"],
-    github: "https://github.com/RonitGandotra05/NLP-based-Sentiment-Analysis"
+    title: "NLP-based Sentiment Analysis",
+    description: "Developed an NLP-based sentiment analysis pipeline to analyze customer chat data. The project involves preprocessing text data, performing sentiment analysis, and visualizing results using Python, Pandas, NLTK, and TextBlob.",
+    tech: ["Python", "NLTK", "TextBlob", "Pandas", "Data Visualization"],
+    link: "https://github.com/khushii1412"
   },
   {
     title: "Metabolic Pathways Analysis",
-    description: "Analysis of metabolic pathways implicated in antifungal drug resistance using genomic and transcriptomic data. Utilized KEGG and Reactome for pathway analysis.",
-    tech: ["KEGG", "Reactome", "Bioinformatics"]
+    description: "Analysis of metabolic pathways implicated in antifungal drug resistance using genomic and transcriptomic data. Utilized KEGG and Reactome for pathway analysis, identifying key resistance mechanisms.",
+    tech: ["KEGG", "Reactome", "Bioinformatics", "Pathway Analysis", "R"],
+    link: "https://github.com/khushii1412"
   }
 ];
 
@@ -28,50 +29,43 @@ const Projects = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto"
         >
-          <h2 className="text-4xl font-bold text-center mb-16 text-white">Projects</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">Projects</h2>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <motion.div
+              <motion.a
                 key={index}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-purple-900/10 backdrop-blur-xl rounded-xl p-6 shadow-xl border border-purple-800/30 hover:bg-purple-900/20 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
               >
-                <h3 className="text-xl font-bold mb-4 text-purple-200">{project.title}</h3>
-                <p className="text-purple-100/80 mb-6">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tech, i) => (
-                    <span 
-                      key={i}
-                      className="px-3 py-1 bg-purple-900/40 backdrop-blur-sm rounded-full text-sm text-purple-200"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                <div className="bg-white/5 backdrop-blur-xl rounded-xl p-8 border border-white/10 shadow-xl transition-all duration-300 hover:bg-white/10 hover:shadow-2xl h-full">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-white/90">
+                    {project.title}
+                  </h3>
+                  <p className="text-white/70 mb-4 text-base">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-auto">
+                    {project.tech.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-4 py-1.5 text-base bg-white/10 text-white/80 rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                {project.github && (
-                  <motion.a 
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-purple-200 hover:text-purple-100 transition-colors inline-flex items-center group"
-                    whileHover={{ x: 5 }}
-                  >
-                    View on GitHub 
-                    <svg 
-                      className="w-5 h-5 ml-1 transform transition-transform group-hover:translate-x-1" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </motion.a>
-                )}
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </motion.div>

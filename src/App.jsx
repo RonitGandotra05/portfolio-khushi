@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Background3D from './components/Background3D';
 import ScrollingDNA from './components/ScrollingDNA';
+import Certifications from './components/Certifications';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Experience />
           <Projects />
           <Skills />
+          <Certifications />
           <Publications />
           <Contact />
         </main>
